@@ -118,33 +118,9 @@ return {
       --   [[ \/_/\/_/\/__/    \/_/\/_/\/_/\/_/]],
       -- }
 
-      if is_android then
-        dashboard.section.header.val = {
-          [[         __                ]],
-          [[ __  __ /\_\    ___ ___    ]],
-          [[/\ \/\ \\/\ \ /' __` __`\  ]],
-          [[\ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-          [[ \ \___/  \ \_\ \_\ \_\ \_\]],
-          [[  \/__/    \/_/\/_/\/_/\/_/]],
-        }
-      else
-        dashboard.section.header.val = {
-          [[888b      88                                                           88]],
-          [[8888b     88                                                           88]],
-          [[88 `8b    88                                                           88]],
-          [[88  `8b   88   ,adPPYba,   8b,dPPYba,  88,dPYba,,adPYba,   ,adPPYYba,  88]],
-          [[88   `8b  88  a8"     "8a  88P'   "Y8  88P'   "88"    "8a  ""     `Y8  88]],
-          [[88    `8b 88  8b       d8  88          88      88      88  ,adPPPPP88  88]],
-          [[88     `8888  "8a,   ,a8"  88          88      88      88  88,    ,88  88]],
-          [[88      `888   `"YbbdP"'   88          88      88      88  `"8bbdP"Y8  88]],
-          [[                                    __                ]],
-          [[                      ___   __  __ /\_\    ___ ___    ]],
-          [[                    /' _ `\/\ \/\ \\/\ \ /' __` __`\  ]],
-          [[                    /\ \/\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-          [[                    \ \_\ \_\ \___/  \ \_\ \_\ \_\ \_\]],
-          [[                     \/_/\/_/\/__/    \/_/\/_/\/_/\/_/]],
-        }
-      end
+      dashboard.section.header.val = {
+        [[]],
+      }
 
 
       local get_icon = require("base.utils").get_icon
@@ -258,6 +234,7 @@ return {
   {
     "echasnovski/mini.indentscope",
     event = { "BufReadPre", "BufNewFile" },
+    enabled = false,
     opts = {
       draw = { delay = 0, animation = function() return 0 end },
       options = { border = "top", try_as_border = true },
@@ -610,10 +587,11 @@ return {
   {
     "petertriho/nvim-scrollbar",
     event = "User BaseFile",
+    enabled = false,
     opts = {
       handlers = {
-        gitsigns = true, -- gitsigns integration (display hunks)
-        ale = true,      -- lsp integration (display errors/warnings)
+        gitsigns = false, -- gitsigns integration (display hunks)
+        ale = false,      -- lsp integration (display errors/warnings)
         search = false,  -- hlslens integration (display search result)
       },
       excluded_filetypes = {
@@ -649,10 +627,13 @@ return {
       local animate = require("mini.animate")
       return {
         open = { enable = false }, -- true causes issues on nvim-spectre
+        close = { enable = false },
         resize = {
+          enable = false,
           timing = animate.gen_timing.linear { duration = 33, unit = "total" },
         },
         scroll = {
+          enable = true,
           timing = animate.gen_timing.linear { duration = 50, unit = "total" },
           subscroll = animate.gen_subscroll.equal {
             predicate = function(total_scroll)

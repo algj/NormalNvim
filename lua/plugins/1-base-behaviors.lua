@@ -683,11 +683,13 @@ return {
     opts = function()
       local utils = require("base.utils")
       local config_dir = utils.os_path(vim.fn.stdpath "config" .. "/lua/base/")
+      local user_config_dir = utils.os_path(vim.fn.stdpath "config" .. "/lua/user/")
       return {
         notify = true,
         reload_files = {
           config_dir .. "1-options.lua",
-          config_dir .. "4-mappings.lua"
+          config_dir .. "4-mappings.lua",
+          user_config_dir .. "1-init.lua",
         },
         reload_callback = function()
           vim.cmd(":silent! colorscheme " .. vim.g.default_colorscheme) -- nvim     colorscheme reload command
