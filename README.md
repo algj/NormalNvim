@@ -99,12 +99,6 @@ Please before opening an issue, check the [astrocommunity](https://github.com/As
 
 * **How can I disable the animations?** You can delete the plugin [mini.animate](https://github.com/echasnovski/mini.animate). In case you only want to disable some animations look into the plugin docs.
 
-* **How can I use `Ask chatgpt`?** On your operative system, set the next env var. You can get an API key from [chatgpt's website](https://platform.openai.com/account/api-keys).
-
-```sh
-OPENAI_API_KEY="my_key_here"
-```
-
 ## 🌟 Get involved
 One of the biggest challenges NormalNvim face is marketing. So share the project and tell your friends!
 [![Stargazers over time](https://starchart.cc/NormalNvim/NormalNvim.svg)](https://starchart.cc/NormalNvim/NormalNvim)
@@ -132,7 +126,7 @@ Did you know NormalNvim was the first Neovim distro to ship a compiler that [sup
 * It would be a neat UX improvement to integrate [snacks.nvim UI toggles](https://github.com/folke/snacks.nvim/blob/main/docs/toggle.md). But let's ensure code remain decoupled.
 * Compiler.nvim: test windows support.
 * Compiler.nvim: add support for justfiles and taskfiles.
-* Makeit.nvim: Add support for justfiles and taskfiles. 
+* Makeit.nvim: Add support for justfiles and taskfiles.
 * Makeit.nvim: Remove orchestrators. This only make sense for compiler.nvim.
 * Makeit.nvim: Allow all possible conventions for `Makefile`, such as `makefile`, `Makefile.linux`, etc.
 * Compiler.nvim: Allow all possible conventions for `Makefile`, such as `makefile`, `Makefile.linux`, etc.

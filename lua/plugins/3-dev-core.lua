@@ -441,7 +441,7 @@ return {
         { path = "litee.nvim", mods = { "litee" } },
         { path = "litee-calltree.nvim", mods = { "litee" } },
         { path = "dooku.nvim", mods = { "dooku" } },
-        { path = "markdown-preview.nvim", mods = { "mkdp" } }, -- has vimscript
+        -- { path = "markdown-preview.nvim", mods = { "mkdp" } }, -- has vimscript
         { path = "markmap.nvim", mods = { "markmap" } },
         { path = "neural", mods = { "neural" } },
         { path = "guess-indent.nvim", mods = { "guess-indent" } },
