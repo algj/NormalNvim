@@ -31,6 +31,9 @@ return {
           -- Other?
           'WinSeparator', 'VertSplit',
 
+          -- Fold
+          "FoldColumn",
+
           -- Bug fix
           'NormalFloat', 'FloatBorder', 'NormalSB',
         },
